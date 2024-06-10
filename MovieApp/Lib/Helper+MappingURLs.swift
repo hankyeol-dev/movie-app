@@ -10,6 +10,7 @@ import Foundation
 enum UrlType {
     case trending
     case credit
+    case detail
 }
 
 enum TrendingType: String {
@@ -20,6 +21,7 @@ enum TrendingType: String {
 enum ImageType: String {
     case poster = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/"
     case background = "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/"
+    case actor = "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/"
 }
 
 func mappingURL(urlType: UrlType, trendingType: TrendingType?, movieId: Int?) -> String {
@@ -30,14 +32,17 @@ func mappingURL(urlType: UrlType, trendingType: TrendingType?, movieId: Int?) ->
     
     if urlType == .credit {
         guard let movieId else { return "" }
-        return APIUrls.TMDB_CREDIT + "\(movieId)/credits?language=ko-KR"
+        return APIUrls.TMDB_CREDIT + "\(String(movieId))/credits?language=ko-KR"
+    }
+    
+    if urlType == .detail {
+        guard let movieId else { return "" }
+        return APIUrls.TMDB_CREDIT + "\(String(movieId))?language=ko-KR"
     }
     
     return ""
 }
 
 func mappingMovieImgURL(imageType: ImageType, path: String) -> String {
-    return imageType == ImageType.poster ?
-    ImageType.poster.rawValue + path
-    : ImageType.background.rawValue + path
+    return imageType.rawValue + path
 }

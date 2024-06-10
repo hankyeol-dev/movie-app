@@ -24,6 +24,10 @@
 		8193D5562C16DBCE00F3B573 /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5552C16DBCE00F3B573 /* Trend.swift */; };
 		8193D5582C16DBD800F3B573 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5572C16DBD800F3B573 /* Genre.swift */; };
 		8193D55A2C16E73D00F3B573 /* Extension+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5592C16E73D00F3B573 /* Extension+UI.swift */; };
+		8193D55C2C17029200F3B573 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D55B2C17029200F3B573 /* Credit.swift */; };
+		8193D55F2C170DBF00F3B573 /* CastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D55E2C170DBF00F3B573 /* CastViewController.swift */; };
+		8193D5612C17174900F3B573 /* CastingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5602C17174900F3B573 /* CastingCell.swift */; };
+		8193D5632C17189900F3B573 /* OverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5622C17189900F3B573 /* OverviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		8193D5552C16DBCE00F3B573 /* Trend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
 		8193D5572C16DBD800F3B573 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		8193D5592C16E73D00F3B573 /* Extension+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UI.swift"; sourceTree = "<group>"; };
+		8193D55B2C17029200F3B573 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		8193D55E2C170DBF00F3B573 /* CastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastViewController.swift; sourceTree = "<group>"; };
+		8193D5602C17174900F3B573 /* CastingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingCell.swift; sourceTree = "<group>"; };
+		8193D5622C17189900F3B573 /* OverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 			children = (
 				8193D5552C16DBCE00F3B573 /* Trend.swift */,
 				8193D5572C16DBD800F3B573 /* Genre.swift */,
+				8193D55B2C17029200F3B573 /* Credit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +114,7 @@
 		8193D5442C16D5EF00F3B573 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8193D55D2C170DA000F3B573 /* Cast */,
 				8193D5502C16DA3400F3B573 /* Trend */,
 			);
 			path = View;
@@ -129,6 +139,16 @@
 				8193D5512C16DA5500F3B573 /* TrendViewCell.swift */,
 			);
 			path = Trend;
+			sourceTree = "<group>";
+		};
+		8193D55D2C170DA000F3B573 /* Cast */ = {
+			isa = PBXGroup;
+			children = (
+				8193D55E2C170DBF00F3B573 /* CastViewController.swift */,
+				8193D5602C17174900F3B573 /* CastingCell.swift */,
+				8193D5622C17189900F3B573 /* OverviewCell.swift */,
+			);
+			path = Cast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +238,15 @@
 				8189BAED2C0EF62D002C9112 /* AppDelegate.swift in Sources */,
 				8193D54B2C16D6E100F3B573 /* Extension+UIVC.swift in Sources */,
 				8193D54D2C16D80300F3B573 /* API.swift in Sources */,
+				8193D55C2C17029200F3B573 /* Credit.swift in Sources */,
+				8193D55F2C170DBF00F3B573 /* CastViewController.swift in Sources */,
 				8193D54F2C16D87100F3B573 /* Helper+MappingURLs.swift in Sources */,
 				8193D5562C16DBCE00F3B573 /* Trend.swift in Sources */,
 				8193D5522C16DA5500F3B573 /* TrendViewCell.swift in Sources */,
 				8189BAEF2C0EF62D002C9112 /* SceneDelegate.swift in Sources */,
+				8193D5632C17189900F3B573 /* OverviewCell.swift in Sources */,
 				8193D55A2C16E73D00F3B573 /* Extension+UI.swift in Sources */,
+				8193D5612C17174900F3B573 /* CastingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

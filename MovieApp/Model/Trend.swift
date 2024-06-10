@@ -21,6 +21,13 @@ struct Movie: Decodable {
     }
 }
 
+struct MovieDetail: Decodable {
+    let backdrop_path: String
+    let poster_path: String
+    let title: String
+    let overview: String
+}
+
 struct MovieResult: Decodable {
     let results: [Movie]
 }

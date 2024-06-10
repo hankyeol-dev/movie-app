@@ -5,7 +5,6 @@
 //  Created by 강한결 on 6/10/24.
 //
 
-import Foundation
 import UIKit
 
 enum isWithTitle {

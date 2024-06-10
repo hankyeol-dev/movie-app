@@ -14,6 +14,7 @@ class TrendViewCell: UITableViewCell {
     
     var data: Movie?
     var genre: [Genre]?
+    var credit: [Cast]?
     
     let backView = UIView()
     
@@ -45,8 +46,6 @@ class TrendViewCell: UITableViewCell {
         configLayout()
         configUI()
     }
-    
-    
 }
 
 extension TrendViewCell {
@@ -62,9 +61,19 @@ extension TrendViewCell {
         movieTitle.text = data.title
         movieCredits.text = data.title
         ratePoint.text = data.formattedVoteAvg
+        fetchCredit(data.id)
     }
     
-    
+    func fetchCredit(_ movieId: Int) {
+        AF.request(mappingURL(urlType: .credit, trendingType: nil, movieId: movieId), headers: HTTPHeaders([API_HEADERS])).responseDecodable(of: Credit.self) { res in
+            switch res.result {
+            case .success(let v):
+                self.movieCredits.text = v.formattedCastName
+            case .failure(let e):
+                print(e)
+            }
+        }
+    }
 }
 
 extension TrendViewCell {
@@ -219,7 +228,7 @@ extension TrendViewCell {
     func configMovieInfoUI() {
         movieTitle.font = UIFont._lg
         movieCredits.font = UIFont._sm
-        
+        movieCredits.textColor = .systemGray
         divider.layer.borderColor = UIColor._gray.cgColor
         divider.layer.borderWidth = 1
         

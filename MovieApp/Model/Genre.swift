@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Alamofire
 
 struct Genre: Decodable {
     let id: Int

@@ -57,7 +57,15 @@ extension TrendViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = CastViewController()
+        
+        guard let datas else { return }
+        vc.configViewWithData(movieId: datas[indexPath.row].id)
+        
+        navigationController?.pushViewController(vc, animated: true)
+        trendTable.reloadRows(at: [indexPath], with: .none)
+    }
 }
 
 extension TrendViewController {
