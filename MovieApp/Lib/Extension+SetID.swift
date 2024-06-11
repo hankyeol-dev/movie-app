@@ -11,13 +11,7 @@ protocol SetID {
     static var id: String { get }
 }
 
-
-extension UIViewController: SetID {
-    static var id: String {
-        return String(describing: self)
-    }
-}
-extension UITableViewCell: SetID {
+extension UIView: SetID {
     static var id: String {
         return String(describing: self)
     }

@@ -22,7 +22,13 @@ class TrendViewController: UIViewController {
         fetchGenres()
 
         self.configView(isTitled: .isTitled, bgColor: .white, titleText: "Trend")
+        navigationItem.setRightBarButton(UIBarButtonItem(image: UIImage(systemName: Icons.SEARCH.rawValue), style: .plain, target: self, action: #selector(goToSearchView)), animated: true)
+        navigationItem.rightBarButtonItem?.tintColor = .gray
         configTable()
+    }
+    
+    @objc func goToSearchView() {
+        navigationController?.pushViewController(SearchMovieViewController(), animated: true)
     }
     
 }

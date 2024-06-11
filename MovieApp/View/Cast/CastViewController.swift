@@ -31,6 +31,8 @@ class CastViewController: UIViewController {
         configTable()
     }
     
+    
+    
 }
 
 extension CastViewController {
@@ -130,7 +132,7 @@ extension CastViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 120
+            return UITableView.automaticDimension
         } else {
             return 100
         }
