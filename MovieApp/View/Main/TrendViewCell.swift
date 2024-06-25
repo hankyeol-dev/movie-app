@@ -198,6 +198,10 @@ extension TrendViewCell {
         
         cardView.layer.cornerRadius = 12
         cardView.clipsToBounds = true
+        cardView.layer.borderWidth = 1
+        cardView.layer.masksToBounds = true
+        cardView.layer.shadowColor = UIColor.darkGray.cgColor
+        cardView.layer.shadowOffset = CGSize(width: 2, height: 2)
     }
     func configCardViewUI() {
         movieImage.contentMode = .scaleAspectFill
