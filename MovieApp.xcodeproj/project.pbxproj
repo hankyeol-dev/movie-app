@@ -22,12 +22,18 @@
 		8189BAF92C0EF62E002C9112 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8189BAF82C0EF62E002C9112 /* Base */; };
 		8189BB022C0EF65F002C9112 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8189BB012C0EF65F002C9112 /* SnapKit */; };
 		8189BB052C0EF912002C9112 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8189BB042C0EF912002C9112 /* Kingfisher */; };
+		818E43392C2A78E800DED474 /* VTableCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E43382C2A78E800DED474 /* VTableCellBase.swift */; };
+		818E433B2C2A796800DED474 /* NormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E433A2C2A796800DED474 /* NormalTableViewCell.swift */; };
+		818E433D2C2A7D1C00DED474 /* VCollectionItemBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E433C2C2A7D1C00DED474 /* VCollectionItemBase.swift */; };
+		818E433F2C2A7DE900DED474 /* VMainCollectionItemNormal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E433E2C2A7DE900DED474 /* VMainCollectionItemNormal.swift */; };
+		818E43482C2AA84900DED474 /* VLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E43472C2AA84900DED474 /* VLabel.swift */; };
+		818E434A2C2AB7CE00DED474 /* VMainCollectionItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E43492C2AB7CE00DED474 /* VMainCollectionItemCard.swift */; };
+		818E434C2C2AE41600DED474 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E434B2C2AE41600DED474 /* CardTableViewCell.swift */; };
 		8193D53E2C16CFC100F3B573 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8193D53D2C16CFC100F3B573 /* .gitignore */; };
 		8193D5422C16D35800F3B573 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8193D5412C16D35800F3B573 /* Alamofire */; };
 		8193D5472C16D61900F3B573 /* VCMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5462C16D61900F3B573 /* VCMain.swift */; };
 		8193D54D2C16D80300F3B573 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D54C2C16D80300F3B573 /* API.swift */; };
 		8193D54F2C16D87100F3B573 /* Helper+MappingURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D54E2C16D87100F3B573 /* Helper+MappingURLs.swift */; };
-		8193D5522C16DA5500F3B573 /* TrendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5512C16DA5500F3B573 /* TrendViewCell.swift */; };
 		8193D5542C16DA8C00F3B573 /* Extension+SetID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5532C16DA8C00F3B573 /* Extension+SetID.swift */; };
 		8193D5562C16DBCE00F3B573 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5552C16DBCE00F3B573 /* Movie.swift */; };
 		8193D5582C16DBD800F3B573 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8193D5572C16DBD800F3B573 /* Genre.swift */; };
@@ -55,12 +61,18 @@
 		8189BAF52C0EF62E002C9112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8189BAF82C0EF62E002C9112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8189BAFA2C0EF62E002C9112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		818E43382C2A78E800DED474 /* VTableCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTableCellBase.swift; sourceTree = "<group>"; };
+		818E433A2C2A796800DED474 /* NormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalTableViewCell.swift; sourceTree = "<group>"; };
+		818E433C2C2A7D1C00DED474 /* VCollectionItemBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCollectionItemBase.swift; sourceTree = "<group>"; };
+		818E433E2C2A7DE900DED474 /* VMainCollectionItemNormal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMainCollectionItemNormal.swift; sourceTree = "<group>"; };
+		818E43472C2AA84900DED474 /* VLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VLabel.swift; sourceTree = "<group>"; };
+		818E43492C2AB7CE00DED474 /* VMainCollectionItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMainCollectionItemCard.swift; sourceTree = "<group>"; };
+		818E434B2C2AE41600DED474 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		8193D53D2C16CFC100F3B573 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8193D53F2C16CFF000F3B573 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8193D5462C16D61900F3B573 /* VCMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMain.swift; sourceTree = "<group>"; };
 		8193D54C2C16D80300F3B573 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		8193D54E2C16D87100F3B573 /* Helper+MappingURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Helper+MappingURLs.swift"; sourceTree = "<group>"; };
-		8193D5512C16DA5500F3B573 /* TrendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendViewCell.swift; sourceTree = "<group>"; };
 		8193D5532C16DA8C00F3B573 /* Extension+SetID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+SetID.swift"; sourceTree = "<group>"; };
 		8193D5552C16DBCE00F3B573 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		8193D5572C16DBD800F3B573 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
@@ -89,10 +101,10 @@
 		812B8CDA2C295255008A6AD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				812B8CE12C297EF7008A6AD2 /* TCMain.swift */,
 				8193D5462C16D61900F3B573 /* VCMain.swift */,
 				812B8CDB2C295382008A6AD2 /* VCMovieDetail.swift */,
 				812B8CDD2C29539F008A6AD2 /* VCBase.swift */,
-				812B8CE12C297EF7008A6AD2 /* TCMain.swift */,
 				812B8CE32C29848A008A6AD2 /* VCUser.swift */,
 			);
 			path = Controller;
@@ -103,6 +115,9 @@
 			children = (
 				812B8CE62C29879A008A6AD2 /* VBase.swift */,
 				812B8CE82C298859008A6AD2 /* VTitleLabel.swift */,
+				818E43472C2AA84900DED474 /* VLabel.swift */,
+				818E43382C2A78E800DED474 /* VTableCellBase.swift */,
+				818E433C2C2A7D1C00DED474 /* VCollectionItemBase.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -179,8 +194,11 @@
 		8193D5502C16DA3400F3B573 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				8193D5512C16DA5500F3B573 /* TrendViewCell.swift */,
 				812B8CEA2C298D42008A6AD2 /* VMain.swift */,
+				818E433A2C2A796800DED474 /* NormalTableViewCell.swift */,
+				818E434B2C2AE41600DED474 /* CardTableViewCell.swift */,
+				818E433E2C2A7DE900DED474 /* VMainCollectionItemNormal.swift */,
+				818E43492C2AB7CE00DED474 /* VMainCollectionItemCard.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -283,21 +301,27 @@
 				812B8CE92C298859008A6AD2 /* VTitleLabel.swift in Sources */,
 				812B8CE42C29848A008A6AD2 /* VCUser.swift in Sources */,
 				81D25A092C184E16009462EA /* Searched.swift in Sources */,
+				818E433D2C2A7D1C00DED474 /* VCollectionItemBase.swift in Sources */,
+				818E43482C2AA84900DED474 /* VLabel.swift in Sources */,
 				8189BAED2C0EF62D002C9112 /* AppDelegate.swift in Sources */,
 				8193D54D2C16D80300F3B573 /* API.swift in Sources */,
 				8193D55C2C17029200F3B573 /* Credit.swift in Sources */,
+				818E433B2C2A796800DED474 /* NormalTableViewCell.swift in Sources */,
 				81D25A022C183EF0009462EA /* Constants.swift in Sources */,
 				812B8CED2C2993A3008A6AD2 /* ApiService.swift in Sources */,
 				812B8CDE2C29539F008A6AD2 /* VCBase.swift in Sources */,
+				818E434A2C2AB7CE00DED474 /* VMainCollectionItemCard.swift in Sources */,
+				818E434C2C2AE41600DED474 /* CardTableViewCell.swift in Sources */,
 				812B8CE22C297EF7008A6AD2 /* TCMain.swift in Sources */,
 				8193D54F2C16D87100F3B573 /* Helper+MappingURLs.swift in Sources */,
+				818E43392C2A78E800DED474 /* VTableCellBase.swift in Sources */,
 				8193D5562C16DBCE00F3B573 /* Movie.swift in Sources */,
-				8193D5522C16DA5500F3B573 /* TrendViewCell.swift in Sources */,
 				8189BAEF2C0EF62D002C9112 /* SceneDelegate.swift in Sources */,
 				8193D5632C17189900F3B573 /* OverviewCell.swift in Sources */,
 				8193D55A2C16E73D00F3B573 /* Extension+UI.swift in Sources */,
 				812B8CDC2C295382008A6AD2 /* VCMovieDetail.swift in Sources */,
 				812B8CE72C29879A008A6AD2 /* VBase.swift in Sources */,
+				818E433F2C2A7DE900DED474 /* VMainCollectionItemNormal.swift in Sources */,
 				8193D5612C17174900F3B573 /* CastingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,10 +19,18 @@ enum Texts {
     enum Title: String {
         case TITLE_MAIN = "영화"
         case TITLE_MOVIE_DETAIL = "상세"
-        case CURRENT_RUNNING = "현재 상영작"
     }
+    
     enum Buttons: String {
         case TABBAR_HOME = "홈"
         case TABBAR_USER = "마이페이지"
+    }
+}
+
+enum URLs {
+    enum Img: String {
+        case POSTER = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/"
+        case BACKGROUND = "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/"
+        case ACTOR = "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/"
     }
 }

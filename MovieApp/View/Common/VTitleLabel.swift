@@ -7,31 +7,15 @@
 
 import UIKit
 
-class VTitleLabel: VBase {
-    enum TitleType {
-        case small, large
-    }
-    
-    lazy var type: TitleType = .small
-    
+class VTitleLabel: VBase {    
     let back = UIView()
     let label = UILabel()
     let button = UIButton()
     
-    required init?(coder: NSCoder) {
-        fatalError("error VTitleLabel")
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    convenience init(_ t: String, type: TitleType) {
+    convenience init(_ t: String) {
         self.init(frame: .zero)
         
         label.text = t
-        
-        self.type = type
     }
     
     override func configureSubView() {
@@ -46,20 +30,24 @@ class VTitleLabel: VBase {
             $0.horizontalEdges.equalTo(self.safeAreaLayoutGuide)
         }
         label.snp.makeConstraints {
-            $0.verticalEdges.leading.equalTo(back.safeAreaLayoutGuide).inset(4)
+            $0.verticalEdges.leading.equalTo(back.safeAreaLayoutGuide)
         }
         button.snp.makeConstraints {
             $0.verticalEdges.equalTo(back.safeAreaLayoutGuide).inset(14)
-            $0.leading.equalTo(label.snp.trailing).offset(16)
-            $0.size.equalTo(12)
+            $0.leading.equalTo(label.snp.trailing).offset(4)
+            $0.size.equalTo(10)
         }
     }
     
     override func configureUI() {
-        label.font = self.type == .small ? ._md_bold : ._xl_bold
+        label.font = ._md_bold
         label.textColor = .black
         button.setImage(UIImage(systemName: Icons.RIGHT_ARROW.rawValue), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .darkGray
+    }
+    
+    func changeText(_ t: String) {
+        label.text = t
     }
 }
 
