@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct RatedMovie: Codable {
+    let id: Int
+    var rate: Int = 0
+    var isLiked: Bool = false
+}
+
 struct Movie: Decodable {
     let id: Int
     let backdrop_path: String
@@ -21,13 +27,7 @@ struct Movie: Decodable {
     }
 }
 
-struct MovieDetail: Decodable {
-    let backdrop_path: String
-    let poster_path: String
-    let title: String
-    let overview: String
-}
-
 struct MovieResult: Decodable {
     let results: [Movie]
 }
+

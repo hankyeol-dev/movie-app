@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SnapKit
 
-class VMain: VBase {
+class MainListView: BaseView {
     let table = UITableView()
     
     override func configureSubView() {

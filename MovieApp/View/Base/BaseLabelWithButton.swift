@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VTitleLabel: VBase {    
+class BaseLabelWithButton: BaseView {
     let back = UIView()
     let label = UILabel()
     let button = UIButton()

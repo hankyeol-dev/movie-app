@@ -1,5 +1,5 @@
 //
-//  VCollectionItemBase.swift
+//  VTableCellBase.swift
 //  MovieApp
 //
 //  Created by 강한결 on 6/25/24.
@@ -8,13 +8,14 @@
 import UIKit
 import SnapKit
 
-class VCollectionItemBase: UICollectionViewCell {
+class BaseTableCell: UITableViewCell {
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         configureSubview()
         configureLayout()

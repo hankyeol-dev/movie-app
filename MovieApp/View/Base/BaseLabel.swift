@@ -7,9 +7,10 @@
 
 import UIKit
 
-class VLabel: UILabel {
+class BaseLabel: UILabel {
+    
     enum LabelType {
-        case title, normal, sub
+        case normal, title, subTitle, date
     }
     
     override init(frame: CGRect) {
@@ -21,22 +22,21 @@ class VLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(_ t: String, type: LabelType) {
+    convenience init(_ t: String, size: CGFloat, type: LabelType) {
         self.init(frame: .zero)
         
         text = t
-        textColor = .black
-        configureFontByType(type)
+        configureFontByType(size: size, type: type)
     }
     
-    private func configureFontByType(_ type: LabelType) {
+    private func configureFontByType(size: CGFloat, type: LabelType) {
         switch type {
-        case .title:
-            font = ._lg_bold
-        case .normal:
-            font = ._md
-        case .sub:
-            font = ._xs
+        case .normal, .date:
+            font = .systemFont(ofSize: size)
+            textColor = .systemGray2
+        case .title, .subTitle:
+            font = .boldSystemFont(ofSize: size)
+            textColor = .black
         }
     }
     

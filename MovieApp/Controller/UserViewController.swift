@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VCUser: VCBase {
+class UserViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

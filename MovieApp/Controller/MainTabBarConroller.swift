@@ -7,14 +7,14 @@
 
 import UIKit
 
-class TCMain: UITabBarController {
+class MainTabBarConroller: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let home = UINavigationController(rootViewController: VCMain())
+        let home = UINavigationController(rootViewController: MainListViewController())
         home.tabBarItem = UITabBarItem(title: Texts.Buttons.TABBAR_HOME.rawValue, image: UIImage(systemName: Icons.TAB_HOUSE.rawValue), tag: 0)
         
-        let user = UINavigationController(rootViewController: VCUser())
+        let user = UINavigationController(rootViewController: UserViewController())
         user.tabBarItem = UITabBarItem(title: Texts.Buttons.TABBAR_USER.rawValue, image: UIImage(systemName: Icons.TAB_USER.rawValue), tag: 1)
         
         setViewControllers([home, user], animated: true)
