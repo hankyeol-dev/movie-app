@@ -53,4 +53,10 @@ class GenreService {
             !$0.status
         }
     }
+    
+    func formattingGenres(_ genres: [Genre]) -> String {
+        return genres.map {
+            "#" + (self.getGenreById($0.id).data?.getName ?? "장르 없음")
+        }.joined(separator: " ")
+    }
 }

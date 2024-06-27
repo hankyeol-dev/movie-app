@@ -33,7 +33,7 @@ class BaseLabel: UILabel {
         switch type {
         case .normal, .date:
             font = .systemFont(ofSize: size)
-            textColor = .systemGray2
+            textColor = .systemGray
         case .title, .subTitle:
             font = .boldSystemFont(ofSize: size)
             textColor = .black

@@ -97,9 +97,8 @@ extension MainListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movieTitle = self.listDatas[collectionView.tag][indexPath.row].title
         let vc = MovieDetailViewController()
-        vc.configureVCTitle(movieTitle)
+        vc.configureViewWithData(self.listDatas[collectionView.tag][indexPath.row].id)
         navigationController?.pushViewController(vc, animated: true)
         collectionView.reloadSections(IndexSet(integer: 0))
     }
