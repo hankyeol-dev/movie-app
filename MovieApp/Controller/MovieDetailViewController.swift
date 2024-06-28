@@ -19,6 +19,13 @@ class MovieDetailViewController: BaseViewController {
         }
         return array
     } ()
+    private var recommends: [Movie] = {
+        var array: [Movie] = []
+        for i in 0...4 {
+            array += [Movie(id: 0, backdrop_path: "", poster_path: "", genre_ids: [], title: "", release_date: "", vote_average: 0, overview: "")]
+        }
+        return array
+    }()
     
     private let mainView = MovieDetailView()
     
@@ -54,7 +61,6 @@ extension MovieDetailViewController {
                 )
                 group.leave()
             } errorHandler: { error in
-                print(error)
                 group.leave()
             }
         }
@@ -66,14 +72,25 @@ extension MovieDetailViewController {
                 self.castings = data.getFiveActors
                 group.leave()
             } errorHandler: { error in
-                print(error)
                 group.leave()
             }
+        }
+        
+        group.enter()
+        DispatchQueue.global().async(group: group) {
+            APIService.manager.fetch(.recommend(id: self.movieId)) { (data: MovieResult) in
+                self.recommends = data.getFiveRecommends
+                group.leave()
+            } errorHandler: { error in
+                group.leave()
+            }
+
         }
         
         group.notify(queue: .main) {
             self.mainView.casting.castingCollection.reloadSections(IndexSet(integer: 0))
             self.mainView.casting.directorCollection.reloadSections(IndexSet(integer: 0))
+            self.mainView.recommend.collection.reloadSections(IndexSet(integer: 0))
         }
     }
 }
@@ -82,8 +99,9 @@ extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewD
     func configureCollectionView() {
         let directing = mainView.casting.directorCollection
         let casting = mainView.casting.castingCollection
+        let recommend = mainView.recommend.collection
         
-        [directing, casting].forEach {
+        [directing, casting, recommend].forEach {
             $0.delegate = self
             $0.dataSource = self
             $0.register(MovieDetailCastingItem.self, forCellWithReuseIdentifier: MovieDetailCastingItem.id)
@@ -99,12 +117,21 @@ extension MovieDetailViewController: UICollectionViewDelegate, UICollectionViewD
         
         if collectionView == mainView.casting.directorCollection {
             item.configureViewWithData(self.crews)
-        } else {
+        } else if collectionView == mainView.casting.castingCollection  {
             item.configureViewWithData(self.castings[indexPath.row])
+        } else {
+            item.configureViewWithData(self.recommends[indexPath.row])
         }
         
         return item
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == mainView.recommend.collection {
+            let vc = MovieDetailViewController()
+            vc.configureViewWithData(self.recommends[indexPath.row].id)
+            navigationController?.pushViewController(vc, animated: true)
+            collectionView.reloadSections(IndexSet(integer: 0))
+        }
+    }
 }

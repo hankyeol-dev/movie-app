@@ -23,6 +23,7 @@ class APIService {
         case searching(query: String)
         case detail(id: Int)
         case credit(id: Int)
+        case recommend(id: Int)
     }
     
     private func serviceEndPoint(_ type: ServiceType) -> String {
@@ -39,12 +40,14 @@ class APIService {
             return "movie/\(String(id))"
         case .credit(let id):
             return "movie/\(String(id))/credits"
+        case .recommend(let id):
+            return "movie/\(String(id))/recommendations"
         }
     }
     
     private func serviceMethod(_ type: ServiceType) -> HTTPMethod {
         switch type {
-        case .currentPlaying, .trend, .topRated, .searching, .detail, .credit:
+        case .currentPlaying, .trend, .topRated, .searching, .detail, .credit, .recommend:
             return .get
         }
     }

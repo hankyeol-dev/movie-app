@@ -68,6 +68,14 @@ struct MovieCrew: Decodable {
 
 struct MovieResult: Decodable {
     let results: [Movie]
+    
+    var getFiveRecommends: [Movie] {
+        var movie: [Movie] = []
+        for i in 0..<5 {
+            movie.append(results[i])
+        }
+        return movie
+    }
 }
 
 struct MovieCastResult: Decodable {

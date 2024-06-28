@@ -34,15 +34,15 @@ class MovieDetailCast: BaseItemView {
         super.configureLayout()
         
         sectionDirector.snp.makeConstraints {
-            $0.top.equalTo(super.sectionTitle.snp.bottom).offset(8)
+            $0.top.equalTo(super.sectionTitle.snp.bottom).offset(12)
             $0.horizontalEdges.equalTo(super.back.safeAreaLayoutGuide).inset(20)
             $0.height.equalTo(16)
         }
         
         directorCollection.snp.makeConstraints {
-            $0.top.equalTo(sectionDirector.snp.bottom).offset(4)
+            $0.top.equalTo(sectionDirector.snp.bottom).offset(8)
             $0.horizontalEdges.equalTo(super.back.safeAreaLayoutGuide).inset(20)
-            $0.height.equalTo(100)
+            $0.height.equalTo(130)
         }
         
         sectionDivider.snp.makeConstraints {
@@ -52,15 +52,15 @@ class MovieDetailCast: BaseItemView {
         }
         
         sectionCasting.snp.makeConstraints {
-            $0.top.equalTo(sectionDivider.snp.bottom).offset(8)
+            $0.top.equalTo(sectionDivider.snp.bottom).offset(12)
             $0.horizontalEdges.equalTo(super.back.safeAreaLayoutGuide).inset(20)
             $0.height.equalTo(16)
         }
         
         castingCollection.snp.makeConstraints {
-            $0.top.equalTo(sectionCasting.snp.bottom).offset(4)
+            $0.top.equalTo(sectionCasting.snp.bottom).offset(8)
             $0.horizontalEdges.equalTo(super.back.safeAreaLayoutGuide).inset(20)
-            $0.height.equalTo(100)
+            $0.height.equalTo(130)
         }
     }
     
@@ -70,14 +70,16 @@ class MovieDetailCast: BaseItemView {
         sectionDivider.layer.borderWidth = 1
         sectionDivider.layer.borderColor = UIColor._gray.cgColor
         directorCollection.backgroundColor = .none
+        directorCollection.showsHorizontalScrollIndicator = false
         castingCollection.backgroundColor = .none
+        castingCollection.showsHorizontalScrollIndicator = false
     }
 }
 
 extension MovieDetailCast {
     static func collectionLayout() -> UICollectionViewFlowLayout {
         let l = UICollectionViewFlowLayout()
-        l.itemSize = CGSize(width: 80, height: 100)
+        l.itemSize = CGSize(width: 80, height: 120)
         l.minimumLineSpacing = 8
         l.minimumInteritemSpacing = 0
         l.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

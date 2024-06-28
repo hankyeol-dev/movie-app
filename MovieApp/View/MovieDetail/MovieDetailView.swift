@@ -15,11 +15,12 @@ class MovieDetailView: BaseView {
     let rating = MovieDetailRating("평점 남기기")
     let overview = MovieDetailOverview("줄거리")
     let casting = MovieDetailCast("감독 | 출연진")
+    let recommend = MovieDetailRecommendation("추천 작품")
     
     override func configureSubView() {
         self.addSubview(scroll)
         scroll.addSubview(scrollContentView)
-        [header, rating, overview, casting].forEach {
+        [header, rating, overview, casting, recommend].forEach {
             scrollContentView.addSubview($0)
         }
     }
@@ -35,7 +36,7 @@ class MovieDetailView: BaseView {
         }
         header.snp.makeConstraints {
             $0.top.horizontalEdges.equalTo(scrollContentView.safeAreaLayoutGuide)
-            $0.height.equalTo(160)
+            $0.height.equalTo(150)
         }
         rating.snp.makeConstraints {
             $0.top.equalTo(header.snp.bottom)
@@ -45,12 +46,17 @@ class MovieDetailView: BaseView {
         overview.snp.makeConstraints {
             $0.top.equalTo(rating.snp.bottom)
             $0.horizontalEdges.equalTo(scrollContentView.safeAreaLayoutGuide)
-            $0.height.equalTo(140)
+            $0.height.equalTo(150)
         }
         casting.snp.makeConstraints {
             $0.top.equalTo(overview.snp.bottom)
             $0.horizontalEdges.equalTo(scrollContentView.safeAreaLayoutGuide)
-            $0.height.equalTo(330)
+            $0.height.equalTo(400)
+        }
+        recommend.snp.makeConstraints {
+            $0.top.equalTo(casting.snp.bottom)
+            $0.horizontalEdges.equalTo(scrollContentView.safeAreaLayoutGuide)
+            $0.height.equalTo(200)
         }
     }
     
