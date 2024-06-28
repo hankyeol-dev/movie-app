@@ -10,7 +10,10 @@ import Foundation
 struct RatedMovie: Codable {
     let id: Int
     var rate: Int = 0
-    var isLiked: Bool = false
+}
+
+struct RatedMovies: Codable {
+    let list: [RatedMovie]
 }
 
 struct Movie: Decodable {

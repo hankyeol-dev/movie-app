@@ -15,22 +15,20 @@ class UserDefaultService {
     static let manager = UserDefaultService()
     
     private var isInUserDefaults: Bool {
-        return standard.array(forKey: self.key) != nil
+        return self.standard.object(forKey: self.key) != nil
     }
     
     private func isRatedMovieById(movieId: Int) -> Bool {
         if self.isInUserDefaults {
-            let array = self.standard.array(forKey: self.key) as! [RatedMovie]
-            return array.filter { $0.id == movieId }.count != 0
-        } 
+            let movies = self.getRatedMovies()
+            return movies.filter { $0.id == movieId }.count != 0
+        }
         
         return false
     }
     
     func getMovieRateById(movieId: Int) -> Int {
-        return self.isRatedMovieById(movieId: movieId) ? self.getRatedMovies().filter {
-            $0.id == movieId
-        }[0].rate : 0
+        return self.isRatedMovieById(movieId: movieId) ? self.getRatedMovieById(movieId).rate : 0
     }
     
     
@@ -41,15 +39,34 @@ class UserDefaultService {
         if !self.isInUserDefaults {
             return []
         } else {
-            return self.standard.array(forKey: self.key) as! [RatedMovie]
+            return try! JSONDecoder().decode(RatedMovies.self, from: self.standard.object(forKey: self.key) as! Data).list
         }
+    }
+    
+    private func getRatedMovieById(_ movieId: Int) -> RatedMovie {
+        if self.isRatedMovieById(movieId: movieId) {
+            return self.getRatedMovies().filter { $0.id == movieId }[0]
+        }
+        
+        return RatedMovie(id: movieId)
     }
     
     
     /**
      UserDefaults에 평가한 영화 정보를 저장하는 API
      */
-    func saveRatedMovies() {
+    func saveRatedMovies(movieId: Int, rating: Int) {
+        var notInTargetMovies = self.getRatedMovies().filter { $0.id != movieId }
+        var targetMovie = self.getRatedMovieById(movieId)
+
+        if rating != 0  {
+            targetMovie.rate = rating
+            notInTargetMovies.append(targetMovie)
+        }
         
+        if let data = try? JSONEncoder().encode(RatedMovies(list: notInTargetMovies)) {
+            self.standard.set(data, forKey: self.key)
+        }
     }
+
 }

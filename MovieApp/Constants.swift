@@ -11,6 +11,8 @@ enum Icons: String {
     case SEARCH = "magnifyingglass"
     case LEFT_ARROW = "chevron.left"
     case RIGHT_ARROW = "chevron.right"
+    case HEART = "heart"
+    case HEART_FILL = "heart.fill"
     case TAB_HOUSE = "house.circle.fill"
     case TAB_USER = "person.circle.fill"
 }

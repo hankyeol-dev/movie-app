@@ -46,6 +46,8 @@ class MovieDetailViewController: BaseViewController {
 extension MovieDetailViewController {
     func configureViewWithData(_ movieId: Int) {
         self.movieId = movieId
+        mainView.rating.configurUserRate(movieId: movieId, rating: UserDefaultService.manager.getMovieRateById(movieId: movieId))
+        mainView.rating.configureViewWithData(UserDefaultService.manager.getMovieRateById(movieId: movieId))
     }
     
     func fetchVCData() {

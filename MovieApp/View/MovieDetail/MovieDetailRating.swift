@@ -9,13 +9,9 @@ import UIKit
 import SnapKit
 
 class MovieDetailRating: BaseItemView {
+    private var movieId = -1
     private let totalRate = 5
     private var userRate = 0
-    private var currentRate: Int = 0 {
-        didSet {
-            mappingCurrentRate()
-        }
-    }
     
     private let ratingStack = UIStackView()
     private var rateStars: [UIButton] = []
@@ -25,6 +21,7 @@ class MovieDetailRating: BaseItemView {
     convenience init(_ t: String) {
         self.init(frame: .zero)
         super.sectionTitle.changeText(t)
+        mappingCurrentRate()
     }
     
     override func configureSubView() {
@@ -48,7 +45,6 @@ class MovieDetailRating: BaseItemView {
         ratingStack.spacing = 4
         ratingStack.distribution = .fillEqually
         
-        currentRate = 5
     }
 }
 
@@ -83,16 +79,18 @@ extension MovieDetailRating {
             }
             userRate = sender.tag + 1
         }
+        
+        UserDefaultService.manager.saveRatedMovies(movieId: self.movieId, rating: self.userRate)
     }
     
     func configureViewWithData(_ rating: Int) {
         for rate in 0..<rating {
             rateStars[rate].configuration = .starRatedButton(ratedStar)
         }
-        
-        for rate in rating..<totalRate {
-            rateStars[rate].configuration = .starRatedButton(notRatedStar)
-        }
-        userRate = rating
+    }
+    
+    func configurUserRate(movieId: Int, rating: Int) {
+        self.movieId = movieId
+        self.userRate = rating
     }
 }
