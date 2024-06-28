@@ -10,7 +10,7 @@ import UIKit
 class BaseLabel: UILabel {
     
     enum LabelType {
-        case normal, title, subTitle, date
+        case normal, title, subTitle, date, error
     }
     
     override init(frame: CGRect) {
@@ -37,6 +37,10 @@ class BaseLabel: UILabel {
         case .title, .subTitle:
             font = .boldSystemFont(ofSize: size)
             textColor = .black
+        case .error:
+            font = .boldSystemFont(ofSize: size)
+            textColor = ._grayDark
+            textAlignment = .center
         }
     }
     

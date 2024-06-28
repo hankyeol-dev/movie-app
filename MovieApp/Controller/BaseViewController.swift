@@ -48,6 +48,13 @@ extension BaseViewController {
         
         return left
     }
+    
+    func genRightWithSearch() -> UIBarButtonItem {
+        let right = UIBarButtonItem(image: UIImage(systemName: Icons.SEARCH.rawValue), style: .plain, target: self, action: #selector(goSearch))
+        right.tintColor = ._grayDark
+        
+        return right
+    }
 }
 
 extension BaseViewController {
@@ -58,5 +65,10 @@ extension BaseViewController {
     @objc
     func goBack() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc
+    func goSearch() {
+        navigationController?.pushViewController(MovieSearchViewController(), animated: true)
     }
 }

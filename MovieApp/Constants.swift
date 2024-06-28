@@ -21,6 +21,7 @@ enum Texts {
     enum Title: String {
         case TITLE_MAIN = "영화"
         case TITLE_MOVIE_DETAIL = "상세"
+        case TITLE_MOVIE_SEARCH = "영화 검색"
     }
     
     enum ListTitle: String, CaseIterable {

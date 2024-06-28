@@ -28,7 +28,7 @@ class MainListViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureNav(title: Texts.Title.TITLE_MAIN.rawValue, leftBarItem: nil, rightBarItem: nil)
+        configureNav(title: Texts.Title.TITLE_MAIN.rawValue, leftBarItem: nil, rightBarItem: self.genRightWithSearch())
     }
     
     func fetchAsyncGroup() {

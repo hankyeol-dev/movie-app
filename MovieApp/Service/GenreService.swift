@@ -32,11 +32,11 @@ class GenreService {
         }.count != 0
     }
     
-    func getGenres() -> [Genre] {
+    private func getGenres() -> [Genre] {
         return genres
     }
     
-    func getGenreById(_ id: Int) -> GenreOutput {
+    private func getGenreById(_ id: Int) -> GenreOutput {
         if !isInGenres(id) {
             return GenreOutput(status: false, data: nil)
         } else {
@@ -46,7 +46,7 @@ class GenreService {
         }
     }
     
-    func getGenresByIds(_ ids: [Int]) -> [GenreOutput] {
+    private func getGenresByIds(_ ids: [Int]) -> [GenreOutput] {
         return ids.map {
             self.getGenreById($0)
         }.filter {
@@ -57,6 +57,13 @@ class GenreService {
     func formattingGenres(_ genres: [Genre]) -> String {
         return genres.map {
             "#" + (self.getGenreById($0.id).data?.getName ?? "장르 없음")
+        }.joined(separator: " ")
+    }
+    
+    func formattingGenresById(_ genres_id: [Int]) -> String {
+        
+        return self.getGenresByIds(genres_id).map {
+            $0.data?.getName ?? "장르 없음"
         }.joined(separator: " ")
     }
 }
