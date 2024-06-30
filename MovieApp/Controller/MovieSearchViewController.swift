@@ -50,7 +50,11 @@ extension MovieSearchViewController {
             self.mainView.configureSuccessView()
             self.datas = data.results
             DispatchQueue.main.async {
-                self.mainView.table.reloadSections(IndexSet(integer: 0), with: .none)
+                if self.datas.count == 0 {
+                    self.mainView.configureErrorView()
+                } else {
+                    self.mainView.table.reloadSections(IndexSet(integer: 0), with: .none)
+                }
             }
         } errorHandler: { error in
             self.mainView.configureErrorView()

@@ -123,8 +123,8 @@
 				8193D5462C16D61900F3B573 /* MainListViewController.swift */,
 				812B8CDB2C295382008A6AD2 /* MovieDetailViewController.swift */,
 				81F6D96E2C2E77FB0008041B /* MovieSearchViewController.swift */,
-				812B8CDD2C29539F008A6AD2 /* BaseViewController.swift */,
 				812B8CE32C29848A008A6AD2 /* UserViewController.swift */,
+				812B8CDD2C29539F008A6AD2 /* BaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

@@ -22,6 +22,7 @@ enum Texts {
         case TITLE_MAIN = "영화"
         case TITLE_MOVIE_DETAIL = "상세"
         case TITLE_MOVIE_SEARCH = "영화 검색"
+        case TITLE_MYPAGE = "마이페이지"
     }
     
     enum ListTitle: String, CaseIterable {
