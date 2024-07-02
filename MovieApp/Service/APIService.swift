@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class APIService {
+final class APIService {
     private init() {}
     
     static let manager = APIService()
@@ -24,6 +24,7 @@ class APIService {
         case detail(id: Int)
         case credit(id: Int)
         case recommend(id: Int)
+        case images(id: Int)
     }
     
     private func serviceEndPoint(_ type: ServiceType) -> String {
@@ -42,12 +43,14 @@ class APIService {
             return "movie/\(String(id))/credits"
         case .recommend(let id):
             return "movie/\(String(id))/recommendations"
+        case .images(let id):
+            return "movie/\(String(id))/images"
         }
     }
     
     private func serviceMethod(_ type: ServiceType) -> HTTPMethod {
         switch type {
-        case .currentPlaying, .trend, .topRated, .searching, .detail, .credit, .recommend:
+        case .currentPlaying, .trend, .topRated, .searching, .detail, .credit, .recommend, .images:
             return .get
         }
     }

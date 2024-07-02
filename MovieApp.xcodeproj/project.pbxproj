@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812962432C32D0EF00601DCC /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812962422C32D0EF00601DCC /* TestViewController.swift */; };
+		812962462C32D47F00601DCC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812962452C32D47F00601DCC /* TestView.swift */; };
+		812962492C337D3500601DCC /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 812962482C337D3500601DCC /* Toast */; };
 		812B8CDC2C295382008A6AD2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812B8CDB2C295382008A6AD2 /* MovieDetailViewController.swift */; };
 		812B8CDE2C29539F008A6AD2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812B8CDD2C29539F008A6AD2 /* BaseViewController.swift */; };
 		812B8CE22C297EF7008A6AD2 /* MainTabBarConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812B8CE12C297EF7008A6AD2 /* MainTabBarConroller.swift */; };
@@ -55,6 +58,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		812962422C32D0EF00601DCC /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		812962452C32D47F00601DCC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		812B8CDB2C295382008A6AD2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		812B8CDD2C29539F008A6AD2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		812B8CE12C297EF7008A6AD2 /* MainTabBarConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarConroller.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812962492C337D3500601DCC /* Toast in Frameworks */,
 				8193D5422C16D35800F3B573 /* Alamofire in Frameworks */,
 				8189BB052C0EF912002C9112 /* Kingfisher in Frameworks */,
 				8189BB022C0EF65F002C9112 /* SnapKit in Frameworks */,
@@ -116,6 +122,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812962442C32D47800601DCC /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				812962452C32D47F00601DCC /* TestView.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		812B8CDA2C295255008A6AD2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +139,7 @@
 				81F6D96E2C2E77FB0008041B /* MovieSearchViewController.swift */,
 				812B8CE32C29848A008A6AD2 /* UserViewController.swift */,
 				812B8CDD2C29539F008A6AD2 /* BaseViewController.swift */,
+				812962422C32D0EF00601DCC /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,6 +207,7 @@
 		8193D5442C16D5EF00F3B573 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				812962442C32D47800601DCC /* Test */,
 				812B8CE52C298790008A6AD2 /* Base */,
 				8193D5502C16DA3400F3B573 /* MainList */,
 				81F6D9522C2C084B0008041B /* MovieDetail */,
@@ -275,6 +291,7 @@
 				8189BB012C0EF65F002C9112 /* SnapKit */,
 				8189BB042C0EF912002C9112 /* Kingfisher */,
 				8193D5412C16D35800F3B573 /* Alamofire */,
+				812962482C337D3500601DCC /* Toast */,
 			);
 			productName = MovieApp;
 			productReference = 8189BAE92C0EF62D002C9112 /* MovieApp.app */;
@@ -308,6 +325,7 @@
 				8189BB002C0EF65F002C9112 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8189BB032C0EF912002C9112 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				8193D5402C16D35700F3B573 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				812962472C337D3500601DCC /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			productRefGroup = 8189BAEA2C0EF62D002C9112 /* Products */;
 			projectDirPath = "";
@@ -346,6 +364,7 @@
 				812B8CE42C29848A008A6AD2 /* UserViewController.swift in Sources */,
 				81F6D9632C2D25410008041B /* MovieDetailOverview.swift in Sources */,
 				818E433D2C2A7D1C00DED474 /* BaseCollectionItem.swift in Sources */,
+				812962432C32D0EF00601DCC /* TestViewController.swift in Sources */,
 				81F6D9672C2D591D0008041B /* MovieDetailCast.swift in Sources */,
 				81F6D95F2C2D0B270008041B /* Extension+Buttons.swift in Sources */,
 				818E43482C2AA84900DED474 /* BaseLabel.swift in Sources */,
@@ -373,6 +392,7 @@
 				81F6D9782C2E927C0008041B /* ValidateService.swift in Sources */,
 				812B8CE72C29879A008A6AD2 /* BaseView.swift in Sources */,
 				81F6D95C2C2C3EE00008041B /* UserDefaultService.swift in Sources */,
+				812962462C32D47F00601DCC /* TestView.swift in Sources */,
 				81F6D9762C2E8EA00008041B /* BaseTextField.swift in Sources */,
 				818E433F2C2A7DE900DED474 /* NormalCollectionItem.swift in Sources */,
 			);
@@ -601,6 +621,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		812962472C337D3500601DCC /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		8189BB002C0EF65F002C9112 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -628,6 +656,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		812962482C337D3500601DCC /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 812962472C337D3500601DCC /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
+		};
 		8189BB012C0EF65F002C9112 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8189BB002C0EF65F002C9112 /* XCRemoteSwiftPackageReference "SnapKit" */;

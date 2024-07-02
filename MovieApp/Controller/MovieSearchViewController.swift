@@ -51,12 +51,16 @@ extension MovieSearchViewController {
             self.datas = data.results
             DispatchQueue.main.async {
                 if self.datas.count == 0 {
+                    print(data)
+                    self.mainView.table.reloadSections(IndexSet(integer: 0), with: .none)
                     self.mainView.configureErrorView()
                 } else {
+                    print(data)
                     self.mainView.table.reloadSections(IndexSet(integer: 0), with: .none)
                 }
             }
         } errorHandler: { error in
+            print(error)
             self.mainView.configureErrorView()
         }
 

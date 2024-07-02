@@ -17,7 +17,10 @@ class MainTabBarConroller: UITabBarController {
         let user = UINavigationController(rootViewController: UserViewController())
         user.tabBarItem = UITabBarItem(title: Texts.Buttons.TABBAR_USER.rawValue, image: UIImage(systemName: Icons.TAB_USER.rawValue), tag: 1)
         
-        setViewControllers([home, user], animated: true)
+        let test = UINavigationController(rootViewController: TestViewController())
+        test.tabBarItem = UITabBarItem(title: Texts.Buttons.TABBAR_TEST.rawValue, image: UIImage(systemName: Icons.TAB_TEST.rawValue), tag: 2)
+        
+        setViewControllers([home, user, test], animated: true)
         
         tabBar.tintColor = ._grayDark
         tabBar.unselectedItemTintColor = ._gray

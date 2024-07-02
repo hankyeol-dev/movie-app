@@ -11,4 +11,10 @@ class UserViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        configureNav(title: Texts.Title.TITLE_MYPAGE.rawValue, leftBarItem: nil, rightBarItem: nil)
+    }
 }

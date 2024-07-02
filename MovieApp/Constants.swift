@@ -15,6 +15,7 @@ enum Icons: String {
     case HEART_FILL = "heart.fill"
     case TAB_HOUSE = "house.circle.fill"
     case TAB_USER = "person.circle.fill"
+    case TAB_TEST = "testtube.2"
 }
 
 enum Texts {
@@ -34,6 +35,7 @@ enum Texts {
     enum Buttons: String {
         case TABBAR_HOME = "홈"
         case TABBAR_USER = "마이페이지"
+        case TABBAR_TEST = "테스트"
     }
 }
 
@@ -42,5 +44,6 @@ enum ImageBaseURL: String {
     case POSTER = "https://image.tmdb.org/t/p/w600_and_h900_bestv2/"
     case BACKGROUND = "https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces/"
     case ACTOR = "https://media.themoviedb.org/t/p/w600_and_h900_bestv2/"
+    case IMAGES = "https://image.tmdb.org/t/p/w780/"
 }
 
